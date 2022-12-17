@@ -1,0 +1,28 @@
+{
+    "name": "wisus/molly",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/helpers/helper.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Jesús Avelar",
+            "email": "wisusdev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "nikic/fast-route": "^v1.3.0",
+        "ext-pdo": "*",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "filp/whoops": "^2.14.6"
+    }
+}
