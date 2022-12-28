@@ -1,5 +1,5 @@
-<?php include_once 'shared/header.php'; ?>
-	<?php include_once 'shared/navbar.php'; ?>
+<?php include_file('shared/header'); ?>
+	<?php include_file('shared/navbar'); ?>
 
 	<div class="container">
 		<?php
@@ -12,4 +12,4 @@
 		<p>This is a body element</p>
 	</div>
 
-<?php include_once 'shared/footer.php'; ?>
+<?php include_file('shared/footer'); ?>
