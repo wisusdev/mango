@@ -48,8 +48,7 @@ class Routes
 
         if (!class_exists($controller)){
             http_response_code(404);
-            include('Sorry, pero ocurrio un error compa :|');
-            die();
+            die(sprintf('ocurrió un error, no encontramos el controlador %s :|', $controller));
         }
 
         // Ejecutar metodo solicitado
