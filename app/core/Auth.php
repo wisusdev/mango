@@ -1,4 +1,6 @@
 <?php
+
+namespace App\core;
 /**
  * Clase para crear sesiones seguras de usuarios
  */
