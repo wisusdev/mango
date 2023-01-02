@@ -1,2 +1,3 @@
-import loadash from 'lodash'
-window._ = loadash
+window._ = require('lodash');
+
+import 'bootstrap';
