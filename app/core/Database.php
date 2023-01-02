@@ -2,6 +2,9 @@
 
 namespace App\core;
 
+use PDO;
+use PDOException;
+
 class Database {
     public function __construct() {
         try {
