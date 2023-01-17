@@ -9,7 +9,7 @@
 					<p class="m-0 fw-semibold">Login</p>
 				</div>
 				<div class="card-body">
-					<form action="<?php echo url('auth/post_login') ?>" method="post">
+					<form action="<?php echo url('auth/postLogin') ?>" method="post">
                         <?php echo insert_inputs(); ?>
 						<div class="form-group mb-3">
 							<label class="form-label">Email</label>
