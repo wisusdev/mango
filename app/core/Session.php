@@ -4,7 +4,7 @@ namespace App\core;
 /**
  * Clase para crear sesiones seguras de usuarios
  */
-class Auth
+class Session
 {
     private string $var    = 'user_session';
     private bool $logged = false;
@@ -19,31 +19,28 @@ class Auth
             return;
         }
 
-        $session =
-            [
-                'logged' => false,
-                'token'  => $this->token,
-                'id'     => $this->id,
-                'ssid'   => $this->ssid,
-                'user'   => $this->user
-            ];
+        $session = [
+            'logged' => false,
+            'token'  => $this->token,
+            'id'     => $this->id,
+            'ssid'   => $this->ssid,
+            'user'   => $this->user
+        ];
 
         $_SESSION[$this->var] = $session;
-        return;
     }
 
     // Crear sesión de usuario
     public static function login($user_id, $user_data = [])
     {
         $self    = new self();
-        $session =
-            [
-                'logged' => true,
-                'token'  => random_password(32),
-                'id'     => $user_id,
-                'ssid'   => session_id(),
-                'user'   => $user_data
-            ];
+        $session = [
+            'logged' => true,
+            'token'  => random_password(32),
+            'id'     => $user_id,
+            'ssid'   => session_id(),
+            'user'   => $user_data
+        ];
 
         $_SESSION[$self->var] = $session;
         return true;
@@ -79,7 +76,10 @@ class Auth
 
     public function __get($var)
     {
-        if (!isset($this->{$var})) return false;
+        if (!isset($this->{$var})){
+            return false;
+        }
+
         return $this->{$var};
     }
 }
