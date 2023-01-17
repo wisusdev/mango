@@ -1,6 +1,7 @@
 <?php
 
 use App\core\Csrf;
+use App\core\Debug;
 
 function to_object($array) {
     return json_decode(json_encode($array));
@@ -73,6 +74,10 @@ function search_in_array(array $array, array $search, &$results){
             return $results;
         }
     }
+}
+
+function dd($data) {
+    Debug::var_dump($data);
 }
 
 function insert_inputs() {
