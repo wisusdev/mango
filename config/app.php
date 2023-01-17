@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name' => 'molly',
+    'name' => 'Mango',
     'domain' => '127.0.0.1',
     'port' => '8000',
     'timezone' => date_default_timezone_set('America/El_Salvador'),
