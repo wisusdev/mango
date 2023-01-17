@@ -13,7 +13,7 @@
                     <a class="nav-link" aria-current="page" href="<?php echo url('auth/login') ?>">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link" href="<?php echo url('auth/register') ?>">Register</a>
                 </li>
             </ul>
         </div>
